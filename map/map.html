@@ -64,15 +64,15 @@ map.on('load', function(){
     }
   })
   map.addLayer({
-    'minzoom':12, 
+    'minzoom':13, 
     'maxzoom':17, 
     'id':'machi-label', //町字
     'type':'symbol',
     'source':'estat',
     'source-layer': 'bnd',
     'layout':{
-        'text-field': '{S_NAME}',
-        'text-font': ['NotoSansJP-Regular']
+        'text-field': ['get','S_NAME'],
+        'text-font': ['NotoSerifJP-SemiBold']
     },
     'paint':{
       'line-color':'#663399',
